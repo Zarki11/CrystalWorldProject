@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/products.css}">
+</head>
+<body>
+
+
+<header>
+    <div class="first-container">
+
+        <div class="top-bar">
+
+            <img th:src="@{/images/logo.crystal.png}" class="media-logo">
+            <div th:replace="~{fragments/commons::nav}">
+            </div>
+        </div>
+
+        <div class="top-information">
+
+            <h1>Crystal World</h1>
+
+            <p>Докосни се до красотата на уникалните минерали, кристали и полускъпоценни камъни.</p>
+        </div>
+
+    </div>
+</header>
+
+<article class="product-container">
+    <div class="product" th:each="p:${products}">
+        <img th:src="@{/downloadPicture/{productId}(productId=${p.id})}" class="">
+        <p class = "product-name" th:text="${p.name}"></p>
+        <div class="price">
+            <p id="product-price" th:text="${p.price}"></p><span>лв.</span>
+        </div>
+        <a th:href="@{/currentProduct/{id}(id=${p.id})}">
+            <button class = "btn"type="submit">КУПИ</button>
+        </a>
+
+        <form th:action="@{/deleteProduct/{id}(id=${p.id})}" th:method="delete" sec:authorize = "hasAuthority('ADMIN')">
+            <button class = "btn" id="btn-del" type="submit">ИЗТРИЙ</button>
+        </form>
+    </div>
+</article>
+</body>
+</html>

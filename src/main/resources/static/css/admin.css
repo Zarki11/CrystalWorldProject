@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+}
+
+header {
+    background-color: black;
+}
+
+h2 {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.main-container {
+    background-image: url("../images/admin-background.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 6em;
+    padding-top: 2em;
+    border-top: 6px solid #A98351;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.form-container  {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 20px;
+    border: solid lightgray 5px;
+    border-radius: 0.9em;
+    height: 80vh;
+    width: 40vw;
+    padding: 5em;
+    margin-top: 5em;
+    background-color: floralwhite;
+}
+
+.addProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6em;
+}
+
+.addProduct input {
+    width: 28vw;
+    height: 6vh;
+    border-radius: 8px;
+    font-size: 20px;
+    border: solid black 3px;
+}
+
+.addProduct .categories {
+    width: 28vw;
+    height: 6vh;
+    border-radius: 8px;
+    font-size: 20px;
+    border: solid black 3px;
+}
+
+#picture {
+    border: none;
+    color: black;
+}
+#btn-add {
+    width: 8em;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 30px;
+    border: solid black 3px;
+    padding: 5px;
+    margin-top: 25px;
+}
+
+#btn-add:hover {
+    background-color: #ccbb75;
+    color: black;
+}

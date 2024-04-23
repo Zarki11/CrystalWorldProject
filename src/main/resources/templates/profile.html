@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/profile.css}">
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+
+    <img th:src="@{/images/logo.crystal.png}" alt="picture" class="media-logo">
+    <div th:replace="~{fragments/commons::nav}">
+    </div>
+  </div>
+</header>
+
+<div class="container">
+    <div class="profile-content">
+
+        <span id="hidden" th:text="${profileId}"></span>
+        <span id="me"><i class="fa-solid fa-circle-user"></i></span>
+        <hr>
+        <i class="fa-solid fa-user"></i><span id="username"></span>
+        <hr>
+        <i class="fa-regular fa-address-card"></i><span id="firstName"></span>
+        <hr>
+        <i class="fa-solid fa-address-card"></i><span id="lastName"></span>
+        <hr>
+        <i class="fa-solid fa-square-envelope"></i><span id="email"></span>
+        <hr>
+
+        <a th:href="@{/users/editProfile}" class="edit"><button>Промени профил</button></a>
+    </div>
+</div>
+
+
+<script th:src = "@{/js/profile-data.js}"></script>
+</body>
+</html>

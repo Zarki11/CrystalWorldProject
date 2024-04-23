@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/register.css}">
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+
+    <img th:src="@{/images/logo.crystal.png}" class="media-logo">
+    <div th:replace="~{fragments/commons::nav}">
+    </div>
+  </div>
+</header>
+
+<section class="reg-form">
+
+
+  <div class="input-info">
+    <h3>РЕГИСТРИРАЙ СЕ</h3>
+
+    <form th:method="post" th:action="@{/register}" th:object="${userRegisterBindingModel}">
+
+      <div class="username err">
+        <input type="text" th:field="*{username}" name="register-username" id="register-username" required
+               placeholder="  Потребителско име" th:errorclass="input-error">
+        <small th:errors="*{username}" class="error-message"></small>
+      </div>
+
+      <div class="f-name err">
+        <input type="text" th:field="*{firstName}" name="register-first-name" id="first-name" required
+               placeholder="  Име" th:errorclass="input-error">
+        <small th:errors="*{firstName}" class="error-message"></small>
+      </div>
+
+      <div class="l-name err">
+        <input type="text" th:field="*{lastName}" name="register-last-name" id="last-name" required
+               placeholder="  Фамилия" th:errorclass="input-error">
+        <small th:errors="*{lastName}" class="error-message"></small>
+      </div>
+
+      <div class="email err">
+        <input type="text" th:field="*{email}" name="register-email" id="reg-email" required
+               placeholder="  Имейл" th:errorclass="input-error">
+        <small th:errors="*{email}" class="error-message"></small>
+      </div>
+
+      <div class="pass err">
+        <input type="password" th:field="*{password}" name="login-password" id="login-password" required
+               placeholder="  Парола" th:errorclass="input-error">
+        <small th:errors="*{password}" class="error-message"></small>
+      </div>
+
+      <div class="confirm err">
+        <input type="password" th:field="*{confirmPassword}" name="confirm-pass" id="login-confirm-pass" required
+               placeholder="  Потвърди парола" th:errorclass="input-error">
+        <small th:errors="*{confirmPassword}" class="error-message"></small>
+      </div>
+
+      <button class="btn" type="submit">РЕГИСТРАЦИЯ</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

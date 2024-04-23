@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/editProfile.css}">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <img th:src="@{/images/logo.crystal.png}" alt="picture" class="media-logo">
+            <div th:replace="~{fragments/commons::nav}">
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+    <div class="profile-content">
+
+        <span id="me"><i class="fa-solid fa-circle-user"></i></span>
+
+        <form th:action="@{/users/confirmEditProfile}" th:method="put" th:object="${editProfileBindingModel}">
+
+            <hr>
+            <i class="fa-solid fa-user"></i></i><input type="text" name="username" placeholder="   Потребителско Име" th:errorclass="input-error">
+            <small th:errors="*{username}" class="error-message"></small>
+            <hr>
+            <i class="fa-regular fa-address-card"></i><input type="text" name="firstName" placeholder="  Име" th:errorclass="input-error">
+            <small th:errors="*{firstName}" class="error-message"></small>
+            <hr>
+            <i class="fa-solid fa-address-card"></i></i><input type="text" name="lastName" placeholder="  Фамилия" th:errorclass="input-error">
+            <small th:errors="*{lastName}" class="error-message"></small>
+            <hr>
+            <i class="fa-solid fa-square-envelope"></i><input type="email" name="email" placeholder="   Имейл" th:errorclass="input-error">
+            <small th:errors="*{email}" class="error-message"></small>
+            <hr>
+            <i class="fa-solid fa-key"></i><input type="text" name="password" placeholder="   Парола" th:errorclass="input-error">
+            <small th:errors="*{password}" class="error-message"></small>
+            <hr>
+            <a th:href="@{users/confirmEditProfile}" class="edit"><button type="submit">Потвърди промените</button></a>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

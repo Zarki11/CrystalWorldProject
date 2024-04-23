@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+
+        <img th:src="@{/images/logo.crystal.png}" alt="picture" class="media-logo">
+        <div th:replace="~{fragments/commons::nav}">
+        </div>
+    </div>
+</header>
+
+<div class="main-container">
+
+    <section class="form-container">
+        <h2>Добави продукт</h2>
+
+        <form th:method="post" th:action="@{/products/addProduct}" th:object="${addProductBindingModel}"
+              class="addProduct" enctype="multipart/form-data">
+            <select th:field="*{forType}" class="categories" id="product-type" name="forType" required>
+                <option value="">Изберете категория</option>
+                <option value="UNPROCESSED"> Непреработени</option>
+                <option value="PROCESSED"> Преработени</option>
+                <small th:errors="*{forType}" class="error-message"></small>
+            </select>
+
+            <input th:field="*{productName}" type="text" name="productName" id="product-name"
+                   placeholder=" Име на продукта" required th:errorclass="input-error">
+            <small th:errors="*{productName}" class="error-message"></small>
+            <input th:field="*{description}" type="text" name="description" id="description"
+                   placeholder=" Описание на продукта" required th:errorclass="input-error">
+            <small th:errors="*{description}" class="error-message"></small>
+            <input th:field="*{price}" type="number" step="0.01" name="price" id="price" placeholder=" Цена" required
+                   th:errorclass="input-error">
+            <small th:errors="*{price}" class="error-message"></small>
+
+            <div class="file">
+                <input type="file" name="picture" id="picture">
+            </div>
+
+            <button id="btn-add" type="submit">Добави</button>
+        </form>
+
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+}
+
+header {
+    background-color: black;
+}
+
+p{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 2.5em;
+    font-family: "Roboto Light", sans-serif, italic;
+    font-weight: 600;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.container {
+    border-top: 5px solid #6f078f;
+    background-image: url("../images/aboutUs.purple.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 3.4em;
+}
+
+.top-bar {
+    margin-bottom: 0;
+}
+
+
+.text-container {
+    max-width: 47vw;
+    margin: 9em auto;
+    background-color: #e3d3eb;
+    border-radius: 2em;
+    padding-left: 3em;
+    padding-right: 1em;
+    box-shadow: 2px 2px 7px 7px #5805a1;
+}
+
+.first-p {
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 4em;
+    padding-top: 3em;
+}
+
+.last-p {
+    padding-top: 3em;
+    padding-left: 3em;
+    text-align: left;
+}
+
+

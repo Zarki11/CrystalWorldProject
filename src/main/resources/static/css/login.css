@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+}
+
+
+h3 {
+    max-width: 10em;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+    padding: 0.4em 1.2em;
+    margin-bottom: 1em;
+    color: #cc9962;
+    border-bottom: #cc9962 5px solid;
+    border-top: #cc9962 5px solid;
+    border-radius: 0.3em;
+    letter-spacing: 3px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.top-bar {
+    background-color: black;
+    border-bottom: 4px #cc9962 solid;
+}
+
+
+.form {
+    background-image: url("../images/login-background.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 10em;
+    padding-top: 2em;
+}
+
+.wrapper {
+    width: 34vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-top: 3em;
+    padding-top: 3em;
+    padding-bottom: 3.4em;
+    border-radius: 1em;
+    margin-left: 8em;
+    box-shadow: 2px 2px 7px 7px #cc9962;
+}
+
+input {
+    width: 20em;
+    font-size: 16px;
+    padding: 0.7em 0.5em;
+    margin: 0.8em;
+    border-radius: 0.3em;
+    background-color: gainsboro;
+    box-shadow: 3px 3px 8px #cc9962;
+}
+.btn {
+    padding: 0.7em 0.1em;
+    margin-top: 2.5em;
+    letter-spacing: 2px;
+    background-color: #cc9962;
+    color: blanchedalmond;
+    font-weight: bold;
+    border-radius: 0.5em;
+    border: #cc9962;
+}
+.btn:hover {
+    background-color: #1a82c4;
+    color: blanchedalmond;
+}
+
+.input-error {
+    background-color: rgb(173, 27, 37);
+}
+
+.invalid {
+    color: rgb(255, 0, 23);
+    font-size: 12px;
+    font-weight: bold;
+    align-self: center;
+}
