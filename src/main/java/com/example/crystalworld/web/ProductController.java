@@ -6,6 +6,7 @@ import com.example.crystalworld.model.entity.Product;
 import com.example.crystalworld.model.enums.TypeEnum;
 import com.example.crystalworld.service.PictureService;
 import com.example.crystalworld.service.ProductService;
+import com.example.crystalworld.util.Cart;
 import com.example.crystalworld.validation.AddProductBindingModel;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -27,9 +28,12 @@ public class ProductController {
 
     private final ProductService productService;
 
-    public ProductController(PictureService pictureService, ProductService productService) {
+    private final Cart cart;
+
+    public ProductController(PictureService pictureService, ProductService productService, Cart cart) {
         this.pictureService = pictureService;
         this.productService = productService;
+        this.cart = cart;
     }
 
     @GetMapping("/products/{type}")
@@ -50,6 +54,7 @@ public class ProductController {
         model.addAttribute("productTitle", currentProduct.getName());
         model.addAttribute("productDesc", currentProduct.getDescription());
         model.addAttribute("productPrice", currentProduct.getPrice());
+        model.addAttribute("productsCount", cart.getProducts().size());
 
         return "currentProduct";
     }

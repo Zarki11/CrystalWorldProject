@@ -62,7 +62,7 @@ form {
     box-shadow: 2px 2px 7px 7px #cc9962;
 }
 
-input {
+.input {
     width: 20em;
     font-size: 16px;
     padding: 0.7em 0.5em;

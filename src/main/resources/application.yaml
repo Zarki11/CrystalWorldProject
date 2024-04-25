@@ -11,11 +11,16 @@ spring:
     hidden-method:
       filter:
         enabled: 'true'
+
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     password: ${MYSQL_PASS}
     username: 'root'
     url: jdbc:mysql://localhost:3306/crystalWorld?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+
+crystal:
+  remember.me.key: ${REMEMBER_ME_KEY:topsecret}
+
 logging:
   level:
     WEB: DEBUG

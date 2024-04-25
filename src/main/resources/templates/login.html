@@ -25,16 +25,20 @@
 
         <form th:method="post" th:action="@{/login}">
             <div class="username">
-                <input type="text" name="username" id="login-username" required
+                <input class = "input" type="text" name="username" id="login-username" required
                        placeholder="  Въведете Вашето потребителско име">
             </div>
 
             <div class="pass">
-                <!--        <label>Парола</label>-->
-                <input type="password" name="password" id="login-password" required
+                <input class = "input" type="password" name="password" id="login-password" required
                        placeholder="  Въведете Вашата парола">
             </div>
-            <button class="btn" type="submit">Влезте в профила си</button>
+
+            <div class="rememberme">
+                <label for="rememberme">Remember me</label>
+                <input type="checkbox" name="rememberme" id="rememberme" class="form-control">
+            </div>
+            <button class="btn" type="submit">Вход</button>
         </form>
     </div>
 </section>

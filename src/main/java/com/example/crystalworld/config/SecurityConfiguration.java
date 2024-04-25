@@ -3,6 +3,7 @@ package com.example.crystalworld.config;
 import com.example.crystalworld.model.enums.RoleEnum;
 import com.example.crystalworld.repository.UserRepository;
 import com.example.crystalworld.service.impl.UserDetailsServiceImpl;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -19,6 +20,13 @@ import org.springframework.security.web.context.SecurityContextRepository;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
+
+    private final String rememberMeKey;
+
+    public SecurityConfiguration(@Value("${crystal.remember.me.key}")
+        String rememberMeKey) {
+        this.rememberMeKey = rememberMeKey;
+    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, SecurityContextRepository securityContextRepository) throws Exception {
@@ -39,7 +47,14 @@ public class SecurityConfiguration {
                         logout.logoutUrl("/logout").invalidateHttpSession(true)
                                 .logoutSuccessUrl("/"))
                 .securityContext((securityContext) ->
-                        securityContext.securityContextRepository(securityContextRepository));
+                        securityContext.securityContextRepository(securityContextRepository))
+                .rememberMe(
+                        rememberMe -> {
+                            rememberMe.key(rememberMeKey)
+                                    .rememberMeParameter("rememberme")
+                                    .rememberMeCookieName("rememberme");
+                        }
+                );
 
         return httpSecurity.build();
 
