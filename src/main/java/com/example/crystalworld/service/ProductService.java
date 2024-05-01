@@ -20,4 +20,6 @@ public interface ProductService {
     ProductExportDto getProductDtoById(Long id);
 
     void deleteCurrentProduct(Long id);
+
+    double sumFinalPrice(List<ProductExportDto> productList);
 }

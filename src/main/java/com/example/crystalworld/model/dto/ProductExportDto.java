@@ -8,14 +8,12 @@ public class ProductExportDto {
     private String name;
     private String description;
     private BigDecimal price;
-    private int count;
     private Long pictureId;
 
-    public ProductExportDto(String name, String description, BigDecimal price, int count) {
+    public ProductExportDto(String name, String description, BigDecimal price) {
         this.name = name;
         this.description = description;
         this.price = price;
-        this.count = count;
     }
 
     public ProductExportDto() {
@@ -51,14 +49,6 @@ public class ProductExportDto {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public Long getPictureId() {

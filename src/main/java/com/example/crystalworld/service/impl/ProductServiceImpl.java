@@ -68,5 +68,18 @@ public class ProductServiceImpl implements ProductService {
         productRepository.deleteById(id);
     }
 
+    @Override
+    public double sumFinalPrice(List<ProductExportDto> productList) {
+
+        double finalPrice = 0;
+
+        for (ProductExportDto exportDto : productList) {
+            finalPrice += exportDto.getPrice().doubleValue();
+        }
+
+        return Math.floor(finalPrice * 100)/100.00;
+
+    }
+
 
 }

@@ -76,6 +76,16 @@ public class ProductController {
         return "redirect:/admin";
     }
 
+    @PostMapping("/addToCart/{id}")
+    public  String addToCart(@PathVariable("id") Long id){
+
+        ProductExportDto product = productService.getProductDtoById(id);
+
+        cart.getProducts().add(product);
+
+        return "redirect:/currentProduct/" + id;
+    }
+
     @DeleteMapping("/deleteProduct/{productId}")
     public String deleteProduct(@PathVariable ("productId") Long id){
 

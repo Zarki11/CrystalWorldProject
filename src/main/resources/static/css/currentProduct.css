@@ -1,0 +1,115 @@
+@import url('https://use.fontawesome.com/releases/v6.4.2/css/all.css');
+@import url('https://fontawesome.com/icons/minus?f=classic&s=solid');
+@import url('https://fontawesome.com/icons/plus?f=classic&s=solid');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Playfair Display", serif;
+}
+
+header {
+    background-color: black;
+    border-bottom: 7px solid #A98351;
+}
+
+.cart .fa-cart-shopping {
+    color: gray;
+    font-size: 50px;
+    position: absolute;
+    right: 4.2em;
+    top: 4.6em;
+    z-index: 200;
+}
+
+.products-in-cart {
+    border: solid black 1px;
+    font-weight: 900;
+    border-radius: 50%;
+    padding: 3px 5px;
+    color: #A98351;
+    background-color: darkslategray;
+    font-size: 15px;
+    position: absolute;
+    right: 15em;
+    top: 15.5em;
+    z-index: 201;
+}
+
+
+.buy {
+    align-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 1.7em;
+    padding: 0.3em 1em;
+    background-color: darkslategray;
+    color: #A98351;
+    border: 3px solid darkslategray;
+    border-radius: 0.8em;
+    margin-left: 3.7em;
+}
+
+.title {
+    border: 2px solid #A98351;
+    padding: 0.3em 2em;
+    margin-bottom: 1.6em;
+    border-radius: 0.5em;
+    color: #A98351;
+}
+
+.wrapper {
+    background-image: url("../images/green-triangle.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4em;
+}
+
+.container {
+    color: black;
+    display: flex;
+    font-weight: 900;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    margin-left: 2em;
+    margin-right: 5em;
+    border-radius: 1em;
+    font-size: 25px;
+    backdrop-filter: blur(30px);
+    border: 3px solid #A98351;
+}
+
+
+.image-container img{
+    max-width: 25vw;
+    aspect-ratio: 1/1;
+    margin-left: 4em;
+}
+
+.desc {
+    display: flex;
+    justify-content: center;
+    margin-left: 10em;
+    max-width: 22vw;
+    font-weight: normal;
+    color: #A98351;
+}
+
+.price {
+    margin-left: 12em;
+    font-size: 17px;
+}
+
+#content {
+    margin-bottom: 1em;
+}
+
+.buy:hover {
+    box-shadow: 2px 2px 7px 7px #A98351;
+    transition-duration: .4s;
+}

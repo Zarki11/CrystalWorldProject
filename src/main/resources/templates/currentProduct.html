@@ -18,7 +18,34 @@
   </div>
 </header>
 
+<a class="cart-wrap" th:href="@{/cart}">
+    <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
+    <p class="products-in-cart" th:text="${productsCount}">0</p>
+</a>
 
+<div class="wrapper">
+<section class="container">
 
+    <article class="image-container">
+        <img th:src="@{/downloadPicture/{productId}(productId=${productId})}">
+    </article>
+
+    <article class="desc">
+        <form th:action="@{/addToCart/{id}(id=${productId})}" th:method="post">
+            <h3 class="title" th:text="${productTitle}">Title</h3>
+            <p id="content" th:text="${productDesc}"></p>
+            <p class="price">
+                <span class="text">Цена: </span>
+                <span th:text="${productPrice}">price</span>
+                <span>лв.</span>
+            </p>
+
+            <button class="buy" type="submit">Добави в количката <i class="fa-solid fa-cart-shopping"></i></button>
+
+        </form>
+    </article>
+
+</section>
+</div>
 </body>
 </html>
