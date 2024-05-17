@@ -18,5 +18,84 @@
     </div>
 </header>
 
+<div class="cart-container">
+
+    <table>
+        <thead>
+        <tr>
+            <th>Продукт:</th>
+            <th>Име:</th>
+            <th>Цена:</th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr class="product" th:each="p, iterator :${productsList}">
+            <td><img class="product-pic" th:src="@{/downloadPicture/{productId}(productId=${p.id})}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.price}"></td>
+            <td id="x"><a th:href="@{/removeFromCart/{index}(index=${iterator.index})}">X</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <form th:method="post" th:action="@{/makeOrder}" th:object="${orderBindingModel}" class="order-info">
+
+        <div class="title">
+            <h2>Данни за доставка</h2>
+        </div>
+
+        <div class="order">
+            <input type="text" name="firstName" id="first-name"
+                   th:value="${userFirstName}" readonly>
+            <small th:errors="*{firstName}" class="error-message"></small>
+        </div>
+
+        <div class="order">
+            <input  type="text" name="lastName" id="last-name"
+                    th:value="${userLastName}"  readonly>
+            <small th:errors="*{lastName}" class="error-message"></small>
+        </div>
+
+        <div class="order">
+            <input type="text" th:field="*{town}" name="town" id="town" required
+                   placeholder="  Град" th:errorclass="input-error">
+            <small th:errors="*{town}" class="error-message"></small>
+        </div>
+        <div class="order">
+            <input type="text" th:field="*{address}" name="address" id="address" required
+                   placeholder="  Адрес за доставка" th:errorclass="input-error">
+            <small th:errors="*{address}" class="error-message"></small>
+        </div>
+
+        <div class="order">
+            <input type="tel" th:field="*{phoneNumber}" name="phoneNumber" id="phone" required
+                   placeholder="  Телефон" th:errorclass="input-error">
+            <small th:errors="*{phoneNumber}" class="error-message"></small>
+        </div>
+
+        <div class="order">
+            <input th:value="${userEmail}" type="email" name="email" id="reg-email"
+                   readonly>
+            <small th:errors="*{email}" class="error-message"></small>
+        </div>
+
+
+
+        <div class="final-price">
+
+          <button class="buy-btn" type="submit">Потвърди поръчката</button>
+
+            <span>Обща сума:</span>
+            <span><span th:text="${#numbers.formatDecimal(finalPrice,1,2,'POINT')}"></span>лв.</span>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <div class="foot" th:replace="~{fragments/commons::footer}"></div>
+</footer>
 </body>
 </html>

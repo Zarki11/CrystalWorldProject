@@ -91,4 +91,20 @@ nav a, #logout-btn{
     background-color: #A98351;
 }
 
+footer {
+    background-color: #A98351;
+    width: 100vw;
+    padding: 5px;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.foot {
+    position: absolute;
+    bottom: 0;
+}
+
+
 

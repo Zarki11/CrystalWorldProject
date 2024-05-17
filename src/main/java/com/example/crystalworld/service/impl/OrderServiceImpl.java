@@ -44,6 +44,7 @@ public class OrderServiceImpl implements OrderService {
         for (ProductExportDto productExportDto : cart.getProducts()){
             OrderedProduct orderedProduct = modelMapper.map(productExportDto, OrderedProduct.class);
             orderedProduct.setProductId(productExportDto.getId());
+            orderedProduct.setCount(1);
 
             orderedProductList.add(orderedProduct);
         }

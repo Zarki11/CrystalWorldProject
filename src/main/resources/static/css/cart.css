@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    border-bottom: 7px solid #A98351;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2ece4;
+}
+
+table{
+
+    align-items: center;
+    width: 75vw;
+    margin-top: 8em;
+}
+
+thead {
+    border: solid lightgray 1px;
+    background-color: lightgray;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+tbody td {
+    border: solid lightgray 1px;
+    font-size: 22px;
+    background-color: lightgray;
+}
+
+.product {
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+}
+
+.product-pic {
+    width: 6vw;
+}
+
+.title {
+    align-self: center;
+    border: 3px solid #A98351;
+    background-color: whitesmoke;
+    padding: 0.5em 0.8em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+.title h2 {
+    color: #A98351;
+    font-weight: bold;
+}
+
+.final-price {
+    max-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: lightgray;
+    border: solid darkgrey 1px;
+    border-radius: 0.7em;
+    font-size: 22px;
+    font-weight: bold;
+    color: #A98351;
+    margin-top: 9em;
+    margin-left: 2em;
+}
+.product #x a{
+    color: red;
+    text-decoration: none;
+}
+
+.order-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    color: orange;
+    gap: 1.3em;
+    max-height: 75vh;
+    margin-top: 2.5em;
+    padding-top: 3.5em;
+    border-top: 3px darkgray dashed;
+    margin-bottom: 3em;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.order-info .order input {
+    width: 24em;
+    height: 2.2em;
+    border-radius: 8px;
+    font-size: 20px;
+    border: solid black 3px;
+    color: black;
+}
+
+.buy-btn {
+    font-size: 20px;
+    background-color: #A98351;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0.5em 0.8em;
+    font-weight: bold;
+    border-color: #A98351;
+}
