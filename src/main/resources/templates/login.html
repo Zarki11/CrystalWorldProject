@@ -6,13 +6,15 @@
     <title>Login</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/responsive/loginResponsive.css}">
 </head>
 <body>
 
 <header>
     <div class="top-bar">
 
-        <img th:src="@{/images/logo.crystal.png}" alt="picture" class="media-logo">
+        <div th:replace="~{fragments/commons::.home}">
+        </div>
         <div th:replace="~{fragments/commons::nav}">
         </div>
     </div>
@@ -35,7 +37,7 @@
             </div>
 
             <div class="rememberme">
-                <label for="rememberme">Remember me</label>
+                <label class="lbl" for="rememberme">Запомни ме</label>
                 <input type="checkbox" name="rememberme" id="rememberme" class="form-control">
             </div>
             <button class="btn" type="submit">Вход</button>
@@ -43,8 +45,6 @@
     </div>
 </section>
 
-<footer>
-    <div class="foot" th:replace="~{fragments/commons::footer}"></div>
-</footer>
+<div class="foot" th:replace="~{fragments/commons::footer}"></div>
 </body>
 </html>

@@ -63,5 +63,16 @@ p{
     text-align: left;
 }
 
+footer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.foot {
+    width: 100%;
+    height: 100%;
+}
+
 
 

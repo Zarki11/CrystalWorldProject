@@ -29,6 +29,7 @@ nav ul {
 
 
 nav a, #logout-btn{
+    font-family: "Playfair Display", serif;
     display: block;
     font-weight: bold;
     padding: 1em 1.5em;
@@ -43,13 +44,18 @@ nav a, #logout-btn{
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    position: relative;
 }
 
 .media-logo {
-    margin: 2em 4em;
-    width: 15%;
-    height: 15%;
+
+    margin:  2.4em 3.3em;
+    display: block;
+    width: 33%;
+    height: auto;
 }
+
+
 
 .first-container {
     background-image: url("../images/background-index.jpg");
@@ -83,7 +89,6 @@ nav a, #logout-btn{
 
 #logout-btn {
     border: 1px solid black;
-    font-family: "Playfair Display", serif;
 }
 
 #logout-btn:hover {
@@ -92,10 +97,12 @@ nav a, #logout-btn{
 }
 
 footer {
-    background-color: #A98351;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
+    position: relative;
     padding: 5px;
-    color: black;
+    color: rebeccapurple;
+    background-color: rgba(0, 0, 0, 0.9);
     font-size: 13px;
     text-align: center;
     font-weight: normal;
@@ -104,7 +111,89 @@ footer {
 .foot {
     position: absolute;
     bottom: 0;
+    width: 100%;
+    height: 100%;
 }
+
+.menu-icon {
+    font-size: 2em;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-icon {
+        color: #e3d3eb;
+        font-size: 2em;
+        display: block;
+        margin: 1.2em 1.2em;
+
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        opacity: 0.96;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav li {
+        margin: 0;
+    }
+
+    .nav a {
+        color: black;
+        padding: 0.9em;
+        text-align: center;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav {
+        display: flex;
+    }
+
+    .top-information {
+        padding-left: 3em;
+        margin-left: 7em;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .top-information p {
+        font-size: 1.3em;
+        margin-top: 4em;
+        margin-bottom: 3em;
+    }
+
+
+}
+
+
+
+
+
+
+
 
 
 

@@ -113,3 +113,14 @@ header {
     box-shadow: 2px 2px 7px 7px #A98351;
     transition-duration: .4s;
 }
+
+footer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.foot {
+    width: 100%;
+    height: 100%;
+}

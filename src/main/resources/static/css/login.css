@@ -72,8 +72,9 @@ form {
     box-shadow: 3px 3px 8px #cc9962;
 }
 .btn {
-    padding: 0.7em 0.1em;
-    margin-top: 2.5em;
+    padding: 0.7em 0.8em;
+    margin-top: 3.1em;
+    margin-bottom: 0.9em;
     letter-spacing: 2px;
     background-color: #cc9962;
     color: blanchedalmond;
@@ -95,4 +96,23 @@ form {
     font-size: 12px;
     font-weight: bold;
     align-self: center;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.foot {
+    width: 100%;
+    height: 100%;
+}
+
+.rememberme {
+    font-size: 1.1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #e3d3eb;
+    margin-left: 10em;
 }

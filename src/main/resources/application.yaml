@@ -1,12 +1,15 @@
 spring:
   jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    defer-datasource-initialization: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: 'TRUE'
+        format_sql: true
     hibernate:
       ddl-auto: update
-    open-in-view: 'false'
+  sql:
+    init:
+      mode: never
   mvc:
     hidden-method:
       filter:
@@ -14,24 +17,28 @@ spring:
 
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    password: ${MYSQL_PASS}
-    username: 'root'
     url: jdbc:mysql://localhost:3306/crystalWorld?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASS}
+
 
 crystal:
   remember.me.key: ${REMEMBER_ME_KEY:topsecret}
 
 logging:
   level:
-    WEB: DEBUG
+    com.example.crystalworld: DEBUG 
     org:
       hibernate:
         type:
           descriptor: TRACE
         SQL: DEBUG
-      nodeValue: WARN
+      springframework:
+        beans: WARN
     blog: WARN
+
 server:
   port: 8080
+
 
 

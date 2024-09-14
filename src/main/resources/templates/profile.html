@@ -12,7 +12,8 @@
 <header>
   <div class="top-bar">
 
-    <img th:src="@{/images/logo.crystal.png}" alt="picture" class="media-logo">
+      <div th:replace="~{fragments/commons::.home}">
+      </div>
     <div th:replace="~{fragments/commons::nav}">
     </div>
   </div>
@@ -40,8 +41,6 @@
 
 <script th:src = "@{/js/profile-data.js}"></script>
 
-<footer>
-    <div class="foot" th:replace="~{fragments/commons::footer}"></div>
-</footer>
+<div class="foot" th:replace="~{fragments/commons::footer}"></div>
 </body>
 </html>

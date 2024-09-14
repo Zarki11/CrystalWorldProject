@@ -93,3 +93,14 @@ footer {
     background-color: #d9ae53;
     color: #202d69;
 }
+
+footer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.foot {
+    width: 100%;
+    height: 100%;
+}

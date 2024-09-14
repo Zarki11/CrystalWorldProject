@@ -8,15 +8,20 @@
 
 <header>
 
+    <a  class="home" th:href="@{/}">
+        <img th:src="@{/images/logo.crystal.png}" alt="picture" class="media-logo"></a>
+
 
     <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <div class="nav">
             <a class="hover" th:href="@{/aboutUs}">ЗА НАС</a>
             <a class="hover" th:href="@{/shop}">МАГАЗИН</a>
             <a class="hover" th:href="@{/contacts}">КОНТАКТИ</a>
             <a class="hover" th:href="@{/register}" sec:authorize="!isAuthenticated()">РЕГИСТРАЦИЯ</a>
             <a class="hover" th:href="@{/login}" sec:authorize="!isAuthenticated()">ВХОД</a>
-            <a class="hover" th:href="@{/users/profile}" sec:authorize="isAuthenticated()">ПРОФИЛ</a>
+            <a class="hover" th:href="@{/users/profile}" sec:authorize="isAuthenticated()">ПРОФИЛ</a>  
             <a class="hover" th:href="@{/admin}" sec:authorize="hasAuthority('ADMIN')">АДМИНИСТРАТОР</a>
 
             <form th:action="@{/logout}" th:method="post" sec:authorize="isAuthenticated()">
@@ -30,5 +35,6 @@
 <footer>
     All rights reserved. © 2024 Velizar Madanski
 </footer>
+
 </body>
 </html>

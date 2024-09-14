@@ -31,6 +31,9 @@ public class UserServiceImpl implements UserService {
     @Value("${ADMIN_PASS}")
     public String adminPassword;
 
+    @Value("${MODERATOR_PASS}")
+    public String moderatorPass;
+
     @Autowired
     public UserServiceImpl(UserRepository userRepository, UserRoleRepository userRoleRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder, UserDetailsService userDetailsService) {
         this.userRepository = userRepository;
@@ -66,13 +69,13 @@ public class UserServiceImpl implements UserService {
         userRoleRepository.save(adminRole);
         userRoleRepository.save(moderatorRole);
 
-        User admin = new User("administrator", passwordEncoder.encode(adminPassword), "zarkii@abv.bg", "Zarki", "Madanski");
+        User admin = new User("Zarki11", passwordEncoder.encode(adminPassword), "velizar.madanski1@gmail.com", "Velizar", "Madanski");
         admin.getUserRoles().add(adminRole);
         admin.getUserRoles().add(moderatorRole);
         admin.setTown("Rudozem");
         userRepository.save(admin);
 
-        User moderator = new User("moderator", passwordEncoder.encode("12345"), "uli@abv.bg", "Yulhan", "Madanski");
+        User moderator = new User("moderator", passwordEncoder.encode(moderatorPass), "uli@abv.bg", "Yulhan", "Madanski");
         moderator.getUserRoles().add(moderatorRole);
         moderator.setTown("Rudozem");
         userRepository.save(moderator);
