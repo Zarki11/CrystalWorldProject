@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+
+    .product {
+        width: 35vw;
+    }
+
+    .product img {
+        aspect-ratio: 1 / 1;
+        display: block;
+        width: 29vw;
+    }
+
+    .product-container {
+        padding-left: unset;
+    }
+}

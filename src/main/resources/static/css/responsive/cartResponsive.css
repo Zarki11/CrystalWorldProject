@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+
+    .order-info {
+        flex-wrap: unset;
+        max-height: unset;
+    }
+
+
+    .order-info .order input {
+        width: unset;
+    }
+
+    .final-price {
+        max-width: 9em;
+        margin-top: 5em;
+    }
+}

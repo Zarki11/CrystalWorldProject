@@ -18,7 +18,6 @@
         <div class="nav">
             <a class="hover" th:href="@{/aboutUs}">ЗА НАС</a>
             <a class="hover" th:href="@{/shop}">МАГАЗИН</a>
-            <a class="hover" th:href="@{/contacts}">КОНТАКТИ</a>
             <a class="hover" th:href="@{/register}" sec:authorize="!isAuthenticated()">РЕГИСТРАЦИЯ</a>
             <a class="hover" th:href="@{/login}" sec:authorize="!isAuthenticated()">ВХОД</a>
             <a class="hover" th:href="@{/users/profile}" sec:authorize="isAuthenticated()">ПРОФИЛ</a>  

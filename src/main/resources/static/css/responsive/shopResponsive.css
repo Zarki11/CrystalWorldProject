@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 60vw;
+        margin-top: 5em;
+    }
+
+    .container h2{
+        display: none;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 3.4em;
+    }
+
+    p {
+        max-width: unset;
+    }
+
+    .image img{
+        aspect-ratio: 1/1;
+        display: block;
+        max-width: 40vw;
+
+    }
+
+
+
+
+
+}

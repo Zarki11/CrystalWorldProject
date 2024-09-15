@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+
+
+    .edit {
+        margin-left: 25%;
+    }
+
+    .profile-content {
+        font-size: 1.7em;
+        margin-left: 1.6em;
+        max-width: 80vw;
+    }
+
+    .edit button {
+        margin-left: unset;
+    }
+
+    #me {
+        font-size: 5em;
+        margin-left: 30%
+    }
+
+
+
+}

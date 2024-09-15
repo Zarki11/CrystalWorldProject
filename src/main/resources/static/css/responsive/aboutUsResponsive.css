@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+
+    .text-container {
+        max-width: 70vw;
+    }
+
+    #me {
+        margin-left: 60%;
+    }
+
+}
